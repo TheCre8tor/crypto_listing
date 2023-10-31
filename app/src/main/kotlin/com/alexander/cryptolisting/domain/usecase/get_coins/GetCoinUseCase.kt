@@ -1,8 +1,8 @@
-package com.alexander.cryptolisting.domain.usecase.get_coin
+package com.alexander.cryptolisting.domain.usecase.get_coins
 
 import com.alexander.cryptolisting.common.Resource
-import com.alexander.cryptolisting.data.remote.dto.toCoin
-import com.alexander.cryptolisting.domain.model.Coin
+import com.alexander.cryptolisting.data.remote.dto.coin_detail_dto.toCoinDetail
+import com.alexander.cryptolisting.domain.model.CoinDetail
 import com.alexander.cryptolisting.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -15,12 +15,12 @@ class GetCoinUseCase @Inject constructor(
 ) {
 
     @Override
-    operator fun invoke(): Flow<Resource<List<Coin>>> {
+    operator fun invoke(coinId: String): Flow<Resource<CoinDetail>> {
         return flow {
             try {
                 emit(Resource.Loading())
-                val coins = repository.getCoins().map { it.toCoin() }
-                emit(Resource.Success(coins))
+                val coin = repository.getCoinById(coinId).toCoinDetail()
+                emit(Resource.Success(coin))
             } catch (error: HttpException) {
                 val message = error.localizedMessage ?: "An unexpected error occurred."
                 emit(Resource.Error(message))

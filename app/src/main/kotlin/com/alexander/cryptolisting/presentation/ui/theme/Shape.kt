@@ -1,4 +1,4 @@
-package com.alexander.cryptolisting.ui.theme
+package com.alexander.cryptolisting.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

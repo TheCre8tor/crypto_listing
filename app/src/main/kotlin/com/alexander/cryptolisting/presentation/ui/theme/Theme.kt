@@ -1,4 +1,4 @@
-package com.alexander.cryptolisting.ui.theme
+package com.alexander.cryptolisting.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -8,14 +8,14 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColorScheme(
+private val darkColorPalette = darkColorScheme(
     primary = ColorPrimary,
     background = DarkGray,
     onBackground = TextWhite,
     onPrimary = DarkGray
 )
 
-private val LightColorPalette = lightColorScheme(
+private val lightColorPalette = lightColorScheme(
     primary = ColorPrimary,
     background = Color.White,
     onBackground = MediumGray,
@@ -30,9 +30,9 @@ fun CryptoListingTheme(
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        darkColorPalette
     } else {
-        LightColorPalette
+        lightColorPalette
     }
 
     MaterialTheme(

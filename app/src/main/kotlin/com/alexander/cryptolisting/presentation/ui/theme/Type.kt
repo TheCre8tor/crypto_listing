@@ -1,4 +1,4 @@
-package com.alexander.cryptolisting.ui.theme
+package com.alexander.cryptolisting.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

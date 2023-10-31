@@ -1,6 +1,5 @@
 package com.alexander.cryptolisting.domain.model
 
-import com.alexander.cryptolisting.data.remote.dto.coin_detail_dto.Tag
 import com.alexander.cryptolisting.data.remote.dto.coin_detail_dto.TeamMember
 
 data class CoinDetail(

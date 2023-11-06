@@ -28,7 +28,7 @@ import com.alexander.cryptolisting.presentation.coin_detail.components.TeamListI
 import com.google.accompanist.flowlayout.FlowRow
 
 @Composable
-fun CoinListScreen(
+fun CoinDetailScreen(
     viewModel: CoinDetailViewModel = hiltViewModel()
 ) {
     val state = viewModel.state.value

@@ -49,7 +49,7 @@ fun CoinListScreen(
                     .align(Alignment.Center)
             )
         }
-        
+
         if (state.isLoading) {
             CircularProgressIndicator(
                 modifier = Modifier.align(Alignment.Center)
